@@ -22,16 +22,16 @@ on:
 
 jobs:
 
-  # 🤖 CI paragraph
-  #
-  # uncomment the content of this paragraph to activate the tests in GitHub CI
-  # - remove the 2 trailing characters "# ", do not change the spaces
-  #   (the `name` keys should be at the same level as the `uses` key)
-  #   (the `strategy` key should be at the same level as the `steps` key)
+  🤖 CI paragraph
 
-  # build:
+  uncomment the content of this paragraph to activate the tests in GitHub CI
+  - remove the 2 trailing characters "# ", do not change the spaces
+    (the `name` keys should be at the same level as the `uses` key)
+    (the `strategy` key should be at the same level as the `steps` key)
 
-  #   runs-on: ubuntu-latest
+  build:
+
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -54,13 +54,13 @@ jobs:
       matrix:
         python-version: [3.8]
 
-  # # 🤖 CD paragraph
-  # #
-  # # uncomment the following lines to activate CD to Heroku
-  # # - remove the 2 trailing characters "# ", do not change the spaces
-  # #   (there should be 2 spaces before the `deploy_heroku` key)
-  # # - keep in mind you also need to configure Heroku HEROKU_API_KEY and HEROKU_EMAIL in GitHub secrets
-  # # - and replace REPLACE_WITH_YOUR_HEROKU_APP_NAME in this file with the name of your Heroku app
+  🤖 CD paragraph
+
+  uncomment the following lines to activate CD to Heroku
+  - remove the 2 trailing characters "# ", do not change the spaces
+    (there should be 2 spaces before the `deploy_heroku` key)
+  - keep in mind you also need to configure Heroku HEROKU_API_KEY and HEROKU_EMAIL in GitHub secrets
+  - and replace REPLACE_WITH_YOUR_HEROKU_APP_NAME in this file with the name of your Heroku app
 
     deploy_heroku:
       needs: build
